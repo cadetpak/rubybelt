@@ -1,0 +1,25 @@
+development: 
+  adapter: postgresql
+  encoding: unicode
+  database: playlist_development
+  pool: 5
+  username: ubuntu
+  password: 
+
+
+test: 
+  adapter: postgresql
+  encoding: unicode
+  database: playlist_test
+  pool: 5
+  username: ubuntu
+  password: 
+
+
+production: 
+  adapter: postgresql
+  encoding: unicode
+  database: playlist_production
+  pool: 5
+  username: ubuntu
+  password: 

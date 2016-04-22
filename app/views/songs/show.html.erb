@@ -1,0 +1,20 @@
+<a href="/songs">Dashboard</a> 
+
+<h3>Others who added <%= @song.artist %> - <%= @song.title %>:</h3>
+
+<table border="1" style="width:50%">
+ <tr>
+   <th>NAME OF USER</th>  
+   <th>HOW MANY TIMES ADDED TO THEIR PLAYLSIT</th>
+ </tr>	
+
+   <tr> 
+ 	<% @users.each do |i|%>
+	<td><a href="/users/<%= i.id %>">
+<%= i.first_name %></a></td>
+	<td> <%= i.plays.where(song:@song).count %> </td>
+
+ </tr>
+
+  <% end %>  
+</table>
